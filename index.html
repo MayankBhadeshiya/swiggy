@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>swiggy</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body>
+
+  <nav class="navbar nav d-flex justify-content-between sticky-top  navbar-light bg-light  border-bottom px-2" aria-label="navbar-top">
+    <div class="nav-item">
+      <a class="nav-link text-dark" href="#">
+        <div class="d-flex">
+          <div><img src="https://www.svgrepo.com/show/418791/location-map-pin.svg" width="30px" alt="location">
+          </div>
+          <div class="align-self-center fs-5 ps-1"><strong>Your Location</strong></div>
+        </div>
+        <div class="text-muted"><small>Gujrat, india</small></div>
+      </a>
+    </div>
+    <div class="nav-item d-flex">
+      <div class="text-end  d-md-flex d-none ">
+        <form class="d-flex align-items-center">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn" type="submit"><img src="https://www.svgrepo.com/show/506313/search.svg" width="30px"
+              alt="SEARCH 2"></button>
+        </form>
+        <a class="nav-link text-dark d-flex align-items-center" href="#">
+          <div><img src="https://www.svgrepo.com/show/472878/user.svg" width="25px" alt="ACCOUNT"></div>
+          <div class="display-12 ps-1">You</div>
+        </a>
+      </div>
+      <div class="text-end">
+        <a class="nav-link text-dark d-flex" href="#">
+          <div><img src="https://www.svgrepo.com/show/24573/offer-label.svg" width="30px" alt=""></div>
+          <div class="align-self-center fs-5 ps-1">Offers</div>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <nav class="nav nav-fill nav-pills d-md-none position-fixed fixed-bottom bg-light nav-light border-top border-bottom" aria-label="navbar-bottom">
+    <div class="nav-item" style="width: 20%;">
+      <a class="nav-link text-dark d-flex flex-column align-items-center" href="#">
+        <div><img src="https://www.svgrepo.com/show/358272/swiggy.svg" width="30px" alt="SWIGGY"></div>
+        <div class="display-12">SWIGGY</div>
+      </a>
+    </div>
+    <div class="nav-item" style="width: 20%;">
+      <a class="nav-link text-dark d-flex flex-column align-items-center" href="#">
+        <div><img src="https://www.svgrepo.com/show/500569/food.svg" width="30px" alt="FOOD"></div>
+        <div class="display-12">FOOD</div>
+      </a>
+    </div>
+    <div class="nav-item" style="width: 20%;">
+      <a class="nav-link text-dark d-flex flex-column align-items-center" href="#">
+        <div><img src="https://www.svgrepo.com/show/490771/groceries.svg" width="30px" alt="INSTANART">
+        </div>
+        <div class="display-12">INSTANART</div>
+      </a>
+    </div>
+    <div class="nav-item" style="width: 20%;">
+      <a class="nav-link text-dark d-flex flex-column align-items-center" href="#">
+        <div><img src="https://www.svgrepo.com/show/506313/search.svg" width="30px" alt="SEARCH"></div>
+        <div class="display-12">SEARCH</div>
+      </a>
+    </div>
+    <div class="nav-item" style="width: 20%;">
+      <a class="nav-link text-dark d-flex flex-column align-items-center" href="#">
+        <div><img src="https://www.svgrepo.com/show/472878/user.svg" width="30px" alt="ACCOUNT"></div>
+        <div class="display-12">ACCOUNT</div>
+      </a>
+    </div>
+  </nav>
+
+  <div class="container d-flex flex-sm-nowrap flex-wrap justify-content-center mt-1">
+    <a href="" class="mx-2 text-dark pt-2 ">
+      <div class="card py-1">
+        <img class="card-img-top"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvfQVRc_xLlFujMJ_ZRYShXP5atc1uPrWuzw&usqp=CAU"
+          alt="Restaurants Card image">
+        <div class="card-img-overlay">
+          <h4 class="card-title">Restaurants</h4>
+          <p class="card-text text-muted">Enjoy your<br>fevourite treats</p>
+          <img src="https://www.svgrepo.com/show/459575/right-arrow.svg" width="50px" alt="arrow img Restaurants">
+        </div>
+      </div>
+    </a>
+    <a href="" class="mx-2 text-dark pt-2">
+      <div class="card py-1">
+        <img class="card-img-top"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvfQVRc_xLlFujMJ_ZRYShXP5atc1uPrWuzw&usqp=CAU"
+          alt="Instamart Card image">
+        <div class="card-img-overlay">
+          <h4 class="card-title">Instamart</h4>
+          <p class="card-text text-muted">Groceries in under<br>30 mins</p>
+          <img src="https://www.svgrepo.com/show/459575/right-arrow.svg" width="50px" alt="arrow img Instamart">
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="container d-flex align-items-center mx-2 my-4">
+    <img src="https://www.svgrepo.com/show/479366/like-hand.svg" width="28px" alt="thumbs up image">
+    <div class="fs-3 ps-2"><strong>Top Picks For You</strong></div>
+  </div>
+
+  <div class="container-fluid d-flex flex-row flex-nowrap overflow-auto">
+    <div id="card1" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XClTAsgvL7zh17TlzuFrDsBUJIFXTwCZYQ&usqp=CAU"
+            width="100px" alt="Chinese Wok image">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>60% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>Chinese Wok</div>
+      <div class="text-muted">23 mins</div>
+    </div>
+    <div id="card2" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://fontmeme.com/images/McDonald%E2%80%99s-Logo.jpg" width="100px" alt="McDonald's image">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>50% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>McDonald's</div>
+      <div class="text-muted">17 mins</div>
+    </div>
+    <div id="card3" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XClTAsgvL7zh17TlzuFrDsBUJIFXTwCZYQ&usqp=CAU"
+            width="100px" alt="Chinese Wok image 2">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>60% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>Chinese Wok</div>
+      <div class="text-muted">23 mins</div>
+    </div>
+    <div id="card4" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://fontmeme.com/images/McDonald%E2%80%99s-Logo.jpg" width="100px" alt="McDonald's image 2">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>50% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>McDonald's</div>
+      <div class="text-muted">17 mins</div>
+    </div>
+    <div id="card5" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XClTAsgvL7zh17TlzuFrDsBUJIFXTwCZYQ&usqp=CAU"
+            width="100px" alt="Chinese Wok image 3">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>60% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>Chinese Wok</div>
+      <div class="text-muted">23 mins</div>
+    </div>
+    <div id="card6" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://fontmeme.com/images/McDonald%E2%80%99s-Logo.jpg" width="100px" alt="McDonald's image 3">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>50% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>McDonald's</div>
+      <div class="text-muted">17 mins</div>
+    </div>
+    <div id="card7" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XClTAsgvL7zh17TlzuFrDsBUJIFXTwCZYQ&usqp=CAU"
+            width="100px" alt="Chinese Wok image 4">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>60% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>Chinese Wok</div>
+      <div class="text-muted">23 mins</div>
+    </div>
+    <div id="card8" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://fontmeme.com/images/McDonald%E2%80%99s-Logo.jpg" width="100px" alt="McDonald's image 4">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>50% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>McDonald's</div>
+      <div class="text-muted">17 mins</div>
+    </div>
+    <div id="card9" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XClTAsgvL7zh17TlzuFrDsBUJIFXTwCZYQ&usqp=CAU"
+            width="100px" alt="Chinese Wok image 5">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>60% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>Chinese Wok</div>
+      <div class="text-muted">23 mins</div>
+    </div>
+    <div id="card10" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://fontmeme.com/images/McDonald%E2%80%99s-Logo.jpg" width="100px" alt="McDonald's image 5">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>50% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>McDonald's</div>
+      <div class="text-muted">17 mins</div>
+    </div>
+    <div id="card11" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XClTAsgvL7zh17TlzuFrDsBUJIFXTwCZYQ&usqp=CAU"
+            width="100px" alt="Chinese Wok image 6">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>60% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>Chinese Wok</div>
+      <div class="text-muted">23 mins</div>
+    </div>
+    <div id="card12" class="m-2">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://fontmeme.com/images/McDonald%E2%80%99s-Logo.jpg" width="100px" alt="McDonald's image 6">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>50% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div>McDonald's</div>
+      <div class="text-muted">17 mins</div>
+    </div>
+
+  </div>
+
+  <div class="fs-3 ps-2 mx-2 mt-5 mb-4"><strong>Today's Featured</strong></div>
+
+  <div class="container mb-5 d-md-none">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/5fe3257ad6874_json_image_1608721786.webp"
+            class="d-block w-100" alt="banner 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.pinimg.com/736x/da/66/24/da66249a283dafab8488b5c3bddf56f1.jpg" class="d-block w-100"
+            alt="banner 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://graphicsfamily.com/wp-content/uploads/edd/2020/11/Tasty-Food-Web-Banner-Design-1180x664.jpg"
+            class="d-block w-100" alt="banner 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="container-fluid d-md-flex d-none">
+    <div class="row">
+      <div class="col-4">
+        <img
+          src="https://d3jmn01ri1fzgl.cloudfront.net/photoadking/webp_thumbnail/5fe3257ad6874_json_image_1608721786.webp"
+          class="d-block w-100" alt="md banner 1">
+      </div>
+      <div class="col-4">
+        <img src="https://i.pinimg.com/736x/da/66/24/da66249a283dafab8488b5c3bddf56f1.jpg" class="d-block w-100"
+          alt="md banner 2">
+      </div>
+      <div class="col-4">
+        <img src="https://graphicsfamily.com/wp-content/uploads/edd/2020/11/Tasty-Food-Web-Banner-Design-1180x664.jpg"
+          class="d-block w-100" alt="md banner 3">
+      </div>
+    </div>
+  </div>
+
+  <div class="fs-3 ps-2 mx-2 mt-5 mb-4"><strong>Offers For You</strong></div>
+
+  <div class="container-fluid d-flex flex-row flex-nowrap overflow-auto">
+    <div class="card card-block m-2 overflow-hidden w-25" style="min-width: 150px;">
+      <div>
+        <div class="d-flex flex-column text-primary p-2">
+          <span><small>UPTO</small></span>
+          <span class="display-4"><strong>60%</strong></span>
+          <span><small><strong>OFF</strong></small></span>
+        </div>
+        <div class="card text-white bg-primary">
+          <div class="card-body">
+            <p class="card-text"><strong>Try New Test</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-block m-2 overflow-hidden w-25" style="min-width: 160px;">
+      <div>
+        <div class="d-flex flex-column text-success p-2">
+          <span><small>UPTO</small></span>
+          <span class="display-4"><strong>50%</strong></span>
+          <span><small><strong>OFF</strong></small></span>
+        </div>
+        <div class="card text-white bg-success">
+          <div class="card-body">
+            <p class="card-text"><strong>Offers To Binge</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-block m-2 overflow-hidden w-25" style="min-width: 150px;">
+      <div>
+        <div class="d-flex flex-column text-danger p-2">
+          <span><small>UPTO</small></span>
+          <span class="display-4"><strong>&#8377;200</strong></span>
+          <span><small><strong>OFF</strong></small></span>
+        </div>
+        <div class="card text-white bg-danger">
+          <div class="card-body">
+            <p class="card-text"><strong>A Feast For 2</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-block m-2 overflow-hidden w-25" style="min-width: 160px;">
+      <div>
+        <div class="d-flex flex-column text-secondary p-2">
+          <span><small>UPTO</small></span>
+          <span class="display-4"><strong>&#8377;300</strong></span>
+          <span><small><strong>OFF</strong></small></span>
+        </div>
+        <div class="card text-white bg-secondary">
+          <div class="card-body">
+            <p class="card-text"><strong>Call For A Party</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card card-block m-2 overflow-hidden w-25" style="min-width: 150px;">
+      <div>
+        <div class="d-flex flex-column text-primary p-2">
+          <span><small>UPTO</small></span>
+          <span class="display-4"><strong>&#8377;250</strong></span>
+          <span><small><strong>OFF</strong></small></span>
+        </div>
+        <div class="card text-white bg-primary">
+          <div class="card-body">
+            <p class="card-text"><strong>Enjoy</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </div>
+
+  <div class="d-flex fs-3 ps-2 mx-2 mt-5">
+    <div><img src="https://www.svgrepo.com/show/118417/restaurant-symbol.svg" width="25px" alt="Restaurants logo">
+    </div>
+    <div class="ps-2"><strong>All Restaurants Nearby</strong></div>
+  </div>
+  <div class="d-flex ps-2 mx-2 mb-4 text-muted">Discover unique testes near you</div>
+
+  <div class="container-fluid d-md-flex flex-wrap">
+    <div id="Restaurants 1" class="m-2 d-flex">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XClTAsgvL7zh17TlzuFrDsBUJIFXTwCZYQ&usqp=CAU"
+            width="100px" alt="image Chinese Wok 1">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>60% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div class="ps-3 d-flex flex-column justify-content-center">
+        <div>Chinese Wok</div>
+        <div class="text-muted"><strong>&#9733; 4.1 &#8226; 23 mins &#8226; &#8377;300 for two</strong>
+        </div>
+        <div class="text-muted">Chinese Food</div>
+      </div>
+    </div>
+    <div id="Restaurants 2" class="m-2 d-flex">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div class="card card-block overflow-hidden" style="min-width: 100px;">
+          <div>
+            <img src="https://fontmeme.com/images/McDonald%E2%80%99s-Logo.jpg" width="100px" alt="image McDonald's 1">
+            <div class="d-flex flex-column text-center text-warning">
+              <span>50% OFF</span>
+              <span><small>UPTO &#8377;120</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ps-3 d-flex flex-column justify-content-center">
+        <div>McDonald's</div>
+        <div class="text-muted"><strong>&#9733; 4.5 &#8226; 17 mins &#8226; &#8377;200 for two</strong>
+        </div>
+        <div class="text-muted">Burgers, Salads, Beverages...</div>
+      </div>
+    </div>
+    <div id="Restaurants 3" class="m-2 d-flex">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XClTAsgvL7zh17TlzuFrDsBUJIFXTwCZYQ&usqp=CAU"
+            width="100px" alt="image Chinese Wok 2">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>60% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div class="ps-3 d-flex flex-column justify-content-center">
+        <div>Chinese Wok</div>
+        <div class="text-muted"><strong>&#9733; 4.1 &#8226; 23 mins &#8226; &#8377;300 for two</strong>
+        </div>
+        <div class="text-muted">Chinese Food</div>
+      </div>
+    </div>
+    <div id="Restaurants 4" class="m-2 d-flex">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div class="card card-block overflow-hidden" style="min-width: 100px;">
+          <div>
+            <img src="https://fontmeme.com/images/McDonald%E2%80%99s-Logo.jpg" width="100px" alt="image McDonald's 2">
+            <div class="d-flex flex-column text-center text-warning">
+              <span>50% OFF</span>
+              <span><small>UPTO &#8377;120</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ps-3 d-flex flex-column justify-content-center">
+        <div>McDonald's</div>
+        <div class="text-muted"><strong>&#9733; 4.5 &#8226; 17 mins &#8226; &#8377;200 for two</strong>
+        </div>
+        <div class="text-muted">Burgers, Salads, Beverages...</div>
+      </div>
+    </div>
+    <div id="Restaurants 5" class="m-2 d-flex">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XClTAsgvL7zh17TlzuFrDsBUJIFXTwCZYQ&usqp=CAU"
+            width="100px" alt="image Chinese Wok 3">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>60% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div class="ps-3 d-flex flex-column justify-content-center">
+        <div>Chinese Wok</div>
+        <div class="text-muted"><strong>&#9733; 4.1 &#8226; 23 mins &#8226; &#8377;300 for two</strong>
+        </div>
+        <div class="text-muted">Chinese Food</div>
+      </div>
+    </div>
+    <div id="Restaurants 6" class="m-2 d-flex">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div class="card card-block overflow-hidden" style="min-width: 100px;">
+          <div>
+            <img src="https://fontmeme.com/images/McDonald%E2%80%99s-Logo.jpg" width="100px" alt="image McDonald's 3">
+            <div class="d-flex flex-column text-center text-warning">
+              <span>50% OFF</span>
+              <span><small>UPTO &#8377;120</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ps-3 d-flex flex-column justify-content-center">
+        <div>McDonald's</div>
+        <div class="text-muted"><strong>&#9733; 4.5 &#8226; 17 mins &#8226; &#8377;200 for two</strong>
+        </div>
+        <div class="text-muted">Burgers, Salads, Beverages...</div>
+      </div>
+    </div>
+    <div id="Restaurants 7" class="m-2 d-flex">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XClTAsgvL7zh17TlzuFrDsBUJIFXTwCZYQ&usqp=CAU"
+            width="100px" alt="image Chinese Wok 4">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>60% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div class="ps-3 d-flex flex-column justify-content-center">
+        <div>Chinese Wok</div>
+        <div class="text-muted"><strong>&#9733; 4.1 &#8226; 23 mins &#8226; &#8377;300 for two</strong>
+        </div>
+        <div class="text-muted">Chinese Food</div>
+      </div>
+    </div>
+    <div id="Restaurants 8" class="m-2 d-flex">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div class="card card-block overflow-hidden" style="min-width: 100px;">
+          <div>
+            <img src="https://fontmeme.com/images/McDonald%E2%80%99s-Logo.jpg" width="100px" alt="image McDonald's 4">
+            <div class="d-flex flex-column text-center text-warning">
+              <span>50% OFF</span>
+              <span><small>UPTO &#8377;120</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ps-3 d-flex flex-column justify-content-center">
+        <div>McDonald's</div>
+        <div class="text-muted"><strong>&#9733; 4.5 &#8226; 17 mins &#8226; &#8377;200 for two</strong>
+        </div>
+        <div class="text-muted">Burgers, Salads, Beverages...</div>
+      </div>
+    </div>
+    <div id="Restaurants 9" class="m-2 d-flex">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6XClTAsgvL7zh17TlzuFrDsBUJIFXTwCZYQ&usqp=CAU"
+            width="100px" alt="image Chinese Wok 5">
+          <div class="d-flex flex-column text-center text-warning">
+            <span>60% OFF</span>
+            <span><small>UPTO &#8377;120</small></span>
+          </div>
+        </div>
+      </div>
+      <div class="ps-3 d-flex flex-column justify-content-center">
+        <div>Chinese Wok</div>
+        <div class="text-muted"><strong>&#9733; 4.1 &#8226; 23 mins &#8226; &#8377;300 for two</strong>
+        </div>
+        <div class="text-muted">Chinese Food</div>
+      </div>
+    </div>
+    <div id="Restaurants 10" class="m-2 d-flex">
+      <div class="card card-block overflow-hidden" style="min-width: 100px;">
+        <div class="card card-block overflow-hidden" style="min-width: 100px;">
+          <div>
+            <img src="https://fontmeme.com/images/McDonald%E2%80%99s-Logo.jpg" width="100px" alt="image McDonald's 5">
+            <div class="d-flex flex-column text-center text-warning">
+              <span>50% OFF</span>
+              <span><small>UPTO &#8377;120</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ps-3 d-flex flex-column justify-content-center">
+        <div>McDonald's</div>
+        <div class="text-muted"><strong>&#9733; 4.5 &#8226; 17 mins &#8226; &#8377;200 for two</strong>
+        </div>
+        <div class="text-muted">Burgers, Salads, Beverages...</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="d-grid">
+      <button id="btn" type="button" class="btn btn-block py-3 mt-4 mb-2"><strong>See all
+          restaurants</strong></button>
+    </div>
+  </div>
+
+  <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/footer_graphic_vxojqs" width="100%"
+    alt="Live for food">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
